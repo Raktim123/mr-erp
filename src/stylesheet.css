@@ -1,0 +1,70 @@
+.template-default__wrap {
+    background-color: #ECEFF8;
+}
+
+.app-header.app-header--nav-open {
+    padding: 10px;
+}
+
+.app-header__content {
+    background-color: white;
+}
+
+.gutter--left.gutter--right.dashboard__wrap {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.dashboard-container {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 40px;
+    background-color: white;
+}
+
+.form {
+    padding: 15px;
+}
+
+.collection-list {
+    padding: 15px;
+}
+
+
+.form .gutter--left.gutter--right.doc-header {
+    padding-top: calc(var(--base)* 1.5);
+    background-color: white;
+}
+
+.form .gutter--left.gutter--right.doc-controls {
+    background-color: white;
+}
+
+.form .document-fields.document-fields--no-sidebar {
+    background-color: white;
+}
+
+.collection-list .gutter--left.gutter--right.collection-list__wrap {
+    background-color: white;
+    padding: 30px;
+}
+
+.nav__link {
+    padding: 8px !important;
+    color: black;
+    font-size: 15px;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+}
+
+.nav__link-icon {
+    display: block !important;
+}
+
+.nav__link:hover {
+    background-color: #CCE5FF;
+}
+
+.nav__link.active {
+    background-color: #CCE5FF;
+}
