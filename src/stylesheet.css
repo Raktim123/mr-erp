@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
+body {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
 .template-default__wrap {
-    background-color: #ECEFF8;
+    background-color: #e1eff2;
 }
 
 .app-header.app-header--nav-open {
@@ -9,7 +19,16 @@
 }
 
 .app-header__content {
-    background-color: white;
+    background-color: #66ccff;
+}
+
+.step-nav::after {
+    display: none;
+}
+.step-nav__last {
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
 }
 
 .gutter--left.gutter--right.dashboard__wrap {
@@ -52,7 +71,7 @@
 }
 
 .nav__link {
-    padding: 8px !important;
+    padding: 15px !important;
     color: black;
     font-size: 15px;
     text-decoration: none !important;
@@ -69,4 +88,81 @@
 
 .nav__link.active {
     background-color: #CCE5FF;
+}
+
+.nav__link-icon {
+    margin-right: 15px;
+}
+
+table {
+    border: 1px solid gray;
+    border-left: 6px solid #579bfc;
+}
+
+.table th,
+.table td {
+    padding: 0.442308rem;
+    min-width: 150px;
+}
+
+th, td {
+    border: 1px solid #e1d8d8;
+}
+
+.table tbody tr:nth-child(odd) {
+    background: rgb(255 255 255);
+}
+
+.table tbody tr:nth-child(even) {
+    background: rgb(255 255 255);
+}
+
+.checkbox-input__input {
+    height: 18px;
+    width: 18px;
+    border: 1px solid black;
+}
+
+.checkbox-input__icon.check {
+    top: -5px;
+    left: -4px;
+}
+
+.input-wrapper input {
+    font-family: var(--font-body) !important;
+    width: 100% !important;
+    border: 1px solid rgb(151 150 150) !important;
+    background: rgb(255 255 255) !important;
+    color: black !important;
+    font-size: 1rem !important;
+    height: 3.8461538462rem !important;
+    line-height: 1.9230769231rem !important;
+    padding: 0.9615384615rem 1.4423076923rem !important;
+    -webkit-appearance: none !important;
+    border-radius: 6px !important;
+}
+
+input:not(:disabled):hover {
+    box-shadow: none !important;
+    border: 1px solid #579bfc !important;
+}
+
+input:not(:disabled):active,
+input:not(:disabled):focus-within,
+input:not(:disabled):focus {
+    box-shadow: none !important;
+    border: 1px solid #579bfc !important;
+}
+
+.login.template-minimal.template-minimal--width-normal {
+    background-image: url('https://media.istockphoto.com/id/1395240661/vector/blur-gradient-glow-abstract-pastel-background.jpg?s=612x612&w=0&k=20&c=2kfkKihMAgQCnjA2HJ_yc560aOlKXQLVqNiHxNCroxE=');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.template-minimal__wrap {
+    padding: 15px;
+    /* box-shadow: 0px 0px 6px 5px #e8e6e6; */
+    background-color: white;
 }

@@ -22,6 +22,7 @@ import Payment from './collections/Payment'
 import Holiday from './collections/Holiday'
 import Employee from './collections/Employee'
 import Nav from './components/Nav'
+import Admission from './collections/Admission'
 
 export default buildConfig({
   admin: {
@@ -39,7 +40,7 @@ export default buildConfig({
     css: path.resolve(__dirname, 'stylesheet.css'),
   },
   editor: slateEditor({}),
-  collections: [Users, Document, Media, LeadStatus, Leads, College, Course, Student, Payment, Holiday, Employee],
+  collections: [Users, Document, Media, LeadStatus, Leads, College, Course, Student, Admission, Payment, Holiday, Employee],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
