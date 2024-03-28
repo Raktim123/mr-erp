@@ -167,6 +167,19 @@ input:not(:disabled):focus {
     background-color: white;
 }
 
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.tab h3 {
+    margin-bottom: 0;
+}
+
 .card.report-card {
     background-color: white;
     border-radius: 10px;
