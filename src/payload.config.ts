@@ -28,7 +28,7 @@ export default buildConfig({
     user: Users.slug,
     bundler: webpackBundler(),
     components: {
-      // Nav: Nav,
+      Nav: Nav,
       graphics: {
         Logo
       },
