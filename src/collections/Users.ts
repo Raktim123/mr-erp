@@ -25,8 +25,16 @@ const Users: CollectionConfig = {
           value: 'admin',
         },
         {
-          label: 'Sales Person',
-          value: 'seller',
+          label: 'Agent',
+          value: 'agent',
+        },
+        {
+          label: 'Accountant',
+          value: 'accountant',
+        },
+        {
+          label: 'Telecaller',
+          value: 'telecaller',
         },
       ],
     },

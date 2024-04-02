@@ -31,7 +31,7 @@ export default buildConfig({
     components: {
       Nav: Nav,
       graphics: {
-        Logo
+        Logo 
       },
       views: {
         Dashboard: Dashboard,

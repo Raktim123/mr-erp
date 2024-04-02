@@ -1,4 +1,5 @@
 import React from 'react'
+import { useAuth } from 'payload/components/utilities'
 import { Line, Bar, Pie, Doughnut } from "react-chartjs-2";
 import { CategoryScale, LinearScale, PointElement, Chart, LineElement } from "chart.js";
 import 'chart.js/auto'
@@ -6,6 +7,10 @@ import 'chart.js/auto'
 
 const Dashboard = () => {
   const [state, sueState] = React.useState('')
+  const { user } = useAuth()
+
+  console.log(user)
+
   return (
     <div className='dashboard-container'>
       <div class="dashboard">
