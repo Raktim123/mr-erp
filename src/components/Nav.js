@@ -27,7 +27,9 @@ const Nav = () => {
   const [menu, setMenus] = React.useState([])
 
   React.useEffect(() => { 
+    if (user.roles == 'admin') { setMenus(adminMenu) }
     if (user.roles == 'agent') { setMenus(agentMenu) }
+    
   })
   
   return (
