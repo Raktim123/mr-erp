@@ -36,6 +36,14 @@ h1 {
     padding-left: 0;
 }
 
+.gutter--left.gutter--right.doc-header {
+    display: none !important;
+}
+
+.doc-controls__content {
+    font-size: 17px;
+}
+
 .dashboard-container {
     /* border-radius: 10px; */
     margin: 10px;

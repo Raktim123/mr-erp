@@ -1,4 +1,5 @@
 import { CollectionConfig } from 'payload/types'
+import payload from 'payload'
 
 const Student: CollectionConfig = {
   slug: 'students',
@@ -50,6 +51,18 @@ const Student: CollectionConfig = {
           label: 'Counsellings', // required
           fields: [
             {
+              name: 'proposed_fees',
+              label: 'Proposed Fees',
+              type: 'number',
+              required: true
+            },
+            {
+              name: 'asking_fees',
+              label: 'Student Asking Fees',
+              type: 'number',
+              required: true
+            },
+            {
               name: 'counselling_date',
               label: "Counselling Date",
               type: 'date',
@@ -66,22 +79,54 @@ const Student: CollectionConfig = {
         },
       ]
     },
+    {
+      name: 'createdBy',
+      type: 'relationship',
+      relationTo: 'users',
+      access: {
+        update: () => false,
+      },
+      admin: {
+        readOnly: true,
+        condition: data => Boolean(data?.createdBy)
+      },
+    },
   ],
   hooks: {
     beforeChange: [
       ({ req, operation, data }) => {
-        // if (operation === 'create') {
-        //   if (req.user) {
-        //     data.createdBy = req.user.id;
-        //     return data;
-        //   }
-        // }
-
-        console.log(req.user)
-        console.log(operation)
-        console.log(data)
+        if (operation === 'create') {
+          if (req.user) {
+            data.createdBy = req.user.id
+          }
+        }
+        return data
       },
     ],
+
+    afterChange: [
+      async ({ req, operation, doc }) => {
+        const post = await payload.create({
+          collection: 'counsellings', // required
+          data: {
+            student: doc.id,
+            proposed_fees: doc.proposed_fees,
+            asking_fees: doc.asking_fees,
+            counselling_date: doc.counselling_date,
+            counselling_docs: doc.counselling_docs,
+            createdBy: req.user.id
+          },
+        })
+
+        return post
+      },
+    ]
+  },
+  access: {
+    create: ({ req: { user } }) => { return true; },
+    read: ({ req: { user } }) => { return true; },
+    update: ({ req: { user } }) => { if (user && user.roles === 'admin') { return true; } },
+    delete: ({ req: { user } }) => { if (user && user.roles === 'admin') { return true; } },
   },
   timestamps: true,
 }
