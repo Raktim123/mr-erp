@@ -11,7 +11,7 @@ h1 {
 }
 
 .template-default__wrap {
-    background-color: #e1eff2;
+    background-color: #ffffff;
 }
 
 .app-header.app-header--nav-open {
@@ -20,6 +20,14 @@ h1 {
 
 .app-header__content {
     background-color: #66ccff;
+}
+
+.nav__scroll {
+    box-shadow: 1px 1px #ebe6e6;
+}
+
+.nav {
+    background-color: #0d0e12f3;
 }
 
 .step-nav::after {
@@ -80,7 +88,7 @@ h1 {
 
 .nav__link {
     padding: 15px !important;
-    color: black;
+    color: white;
     font-size: 15px;
     text-decoration: none !important;
     border-radius: 4px !important;
@@ -90,9 +98,9 @@ h1 {
     display: block !important;
 }
 
-.nav__link:hover {
+/* .nav__link:hover {
     background-color: #CCE5FF;
-}
+} */
 
 .nav__link.active {
     background-color: #CCE5FF;
